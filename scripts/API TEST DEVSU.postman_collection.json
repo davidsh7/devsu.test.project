@@ -1,0 +1,479 @@
+{
+	"info": {
+		"_postman_id": "3efc224c-881e-4b3e-855b-c06cbeac53b5",
+		"name": "API TEST DEVSU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "210995"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "createClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marianela Montalvo\",\r\n    \"gender\": \"FEMALE\",\r\n    \"age\": 25,\r\n    \"identification\": \"225487\",\r\n    \"address\": \"Amazonas y NNUU\",\r\n    \"phone\": \"097548965\",\r\n    \"password\": \"5768\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getClient",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiQTI1NktXIiwia2lkIjoiNUprTS0tclNrZEpYSGZ1U3NvZEZDaEpxNkQ0dU1icEtfNDVVSk9ReVpONCJ9.k36YZ2PfN4XBv3pOHinuUznrhFtb_N0m_Xj4gn48XKsh9pHNEFQQLg.b5Ev94rgAG9_3B1Be9acFw.MW5hQWClAP3JVPpMhPMtQo1xEsBJ_h0qG2Xnh8mN8_dazyp0F5NDDfxcwr9y9tYBnqkt5z2-4L_cEf_xbE0IVGVAody9ZzCZsl_e809g62c-OoJa3sPR1w_cBIBDCRJXa3QJQfuPXgC4Wfs1XqJ1zP-_a99yu5QFNV56zD752-xuYeBtdfb3nBYRZOwMBT1yp1Buzb6nsLvA_who_nJaHdcLOu2sdsr3ICkYxlgKGws.PsPZe--Z4pzHSu_JwuoUuQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllClients",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiQTI1NktXIiwia2lkIjoiNUprTS0tclNrZEpYSGZ1U3NvZEZDaEpxNkQ0dU1icEtfNDVVSk9ReVpONCJ9.hCm6ngj4M-Q5wW4OOKXw-qIYpoMF_xUoYWCvGiAt3GQjq9AEPjoKxg.PR4xiIkkLux5yHtLTuodug.mw7_Kybp9cXAqiCMGdR_ruSIoc5NMalJbVbyKe3YgVSgDv9cmC6Zv4ORwiCWH0UGemS5BbbxZK-kTEWznsr7m4TK-_4VWIFk9oDajwhtkJneUzhUE8e8PRZ5JPkypS-4S1uY5w5PV989joD15b_wgn0IOrverCP0_11t1zyBgbdCD9qT-ccfLBBScHr6aZi40D86KwGR4ERik-KHFMafudVOfkuPEE4k3uzhWCHebSo.4sxSz5OEMfVT9u3tDkjlEgXvo6KpkI1suiw.J0n57kmttWHrBaGc7CR0eA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateClient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": 1,\r\n    \"name\": \"Marianela Montalvo\",\r\n    \"gender\": \"FEMALE\",\r\n    \"age\": 25,\r\n    \"identification\": \"225487\",\r\n    \"address\": \"Amazonas y NNUU\",\r\n    \"phone\": \"097548965\",\r\n    \"password\": \"5768\",\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteClient",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYXZpZHNoIiwiaWF0IjoxNjYwNDg0ODg2LCJleHAiOjE2NjA1NzEyODZ9.xYFRRj-_QV5HqtgEkWBjOGFTqd4M6p9TJXmAEFGQLjUI-E1xAvWoqw_I-6kpetlGSZHqt3EFzETvQZBhSDjT6w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "html"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "createAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"225487\",\r\n    \"accountType\": \"CURRENT\",\r\n    \"initialBalance\": 0,\r\n    \"clientId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccount",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiQTI1NktXIiwia2lkIjoiNUprTS0tclNrZEpYSGZ1U3NvZEZDaEpxNkQ0dU1icEtfNDVVSk9ReVpONCJ9.k36YZ2PfN4XBv3pOHinuUznrhFtb_N0m_Xj4gn48XKsh9pHNEFQQLg.b5Ev94rgAG9_3B1Be9acFw.MW5hQWClAP3JVPpMhPMtQo1xEsBJ_h0qG2Xnh8mN8_dazyp0F5NDDfxcwr9y9tYBnqkt5z2-4L_cEf_xbE0IVGVAody9ZzCZsl_e809g62c-OoJa3sPR1w_cBIBDCRJXa3QJQfuPXgC4Wfs1XqJ1zP-_a99yu5QFNV56zD752-xuYeBtdfb3nBYRZOwMBT1yp1Buzb6nsLvA_who_nJaHdcLOu2sdsr3ICkYxlgKGws.PsPZe--Z4pzHSu_JwuoUuQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAccounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiQTI1NktXIiwia2lkIjoiNUprTS0tclNrZEpYSGZ1U3NvZEZDaEpxNkQ0dU1icEtfNDVVSk9ReVpONCJ9.hCm6ngj4M-Q5wW4OOKXw-qIYpoMF_xUoYWCvGiAt3GQjq9AEPjoKxg.PR4xiIkkLux5yHtLTuodug.mw7_Kybp9cXAqiCMGdR_ruSIoc5NMalJbVbyKe3YgVSgDv9cmC6Zv4ORwiCWH0UGemS5BbbxZK-kTEWznsr7m4TK-_4VWIFk9oDajwhtkJneUzhUE8e8PRZ5JPkypS-4S1uY5w5PV989joD15b_wgn0IOrverCP0_11t1zyBgbdCD9qT-ccfLBBScHr6aZi40D86KwGR4ERik-KHFMafudVOfkuPEE4k3uzhWCHebSo.4sxSz5OEMfVT9u3tDkjlEgXvo6KpkI1suiw.J0n57kmttWHrBaGc7CR0eA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountId\": 1,\r\n    \"accountNumber\": \"225487\",\r\n    \"accountType\": \"CURRENT\",\r\n    \"initialBalance\": 100,\r\n    \"clientId\": 1,\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYXZpZHNoIiwiaWF0IjoxNjYwNDg0ODg2LCJleHAiOjE2NjA1NzEyODZ9.xYFRRj-_QV5HqtgEkWBjOGFTqd4M6p9TJXmAEFGQLjUI-E1xAvWoqw_I-6kpetlGSZHqt3EFzETvQZBhSDjT6w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "html"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movement",
+			"item": [
+				{
+					"name": "createMovement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"accountId\": 1,\r\n  \"amount\": 600\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/movements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMovement",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiQTI1NktXIiwia2lkIjoiNUprTS0tclNrZEpYSGZ1U3NvZEZDaEpxNkQ0dU1icEtfNDVVSk9ReVpONCJ9.k36YZ2PfN4XBv3pOHinuUznrhFtb_N0m_Xj4gn48XKsh9pHNEFQQLg.b5Ev94rgAG9_3B1Be9acFw.MW5hQWClAP3JVPpMhPMtQo1xEsBJ_h0qG2Xnh8mN8_dazyp0F5NDDfxcwr9y9tYBnqkt5z2-4L_cEf_xbE0IVGVAody9ZzCZsl_e809g62c-OoJa3sPR1w_cBIBDCRJXa3QJQfuPXgC4Wfs1XqJ1zP-_a99yu5QFNV56zD752-xuYeBtdfb3nBYRZOwMBT1yp1Buzb6nsLvA_who_nJaHdcLOu2sdsr3ICkYxlgKGws.PsPZe--Z4pzHSu_JwuoUuQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/movements/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMovement NO TERMINADO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movementId\": \"1\",\r\n    \"amount\": -300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/movements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMovement",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYXZpZHNoIiwiaWF0IjoxNjYwNDg0ODg2LCJleHAiOjE2NjA1NzEyODZ9.xYFRRj-_QV5HqtgEkWBjOGFTqd4M6p9TJXmAEFGQLjUI-E1xAvWoqw_I-6kpetlGSZHqt3EFzETvQZBhSDjT6w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "html"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/movements/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/reports?startDate=2024-01-01&endDate=2024-01-30&identification=225487",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"reports"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-01-30"
+								},
+								{
+									"key": "identification",
+									"value": "225487"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

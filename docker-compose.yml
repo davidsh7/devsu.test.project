@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: dbpostgres
+    environment:
+      POSTGRES_DB: devsu
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - devsu_network
+
+  microservice1:
+    build:
+      context: .
+      dockerfile: DockerfileA
+    container_name: microservice1
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - devsu_network
+    restart: unless-stopped
+
+  microservice2:
+    build:
+      context: .
+      dockerfile: DockerfileB
+    container_name: microservice2
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+    networks:
+      - devsu_network
+    restart: unless-stopped
+
+networks:
+  devsu_network:

@@ -1,0 +1,26 @@
+# Use the official Maven image as base
+FROM maven:3.8.1-openjdk-17 AS build
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the project files
+COPY . .
+
+# Build the application
+RUN mvn install -DskipTests
+
+# Create a new image
+FROM openjdk:17-jdk-alpine
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the JAR file from the build stage to the container
+COPY --from=build /usr/src/app/microservice1/target/microservice1-1.0.0.jar .
+
+# Expose the port on which the application will run
+EXPOSE 8080
+
+# Set the startup command to run the JAR file
+CMD ["java", "-jar", "microservice1-1.0.0.jar"]
